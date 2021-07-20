@@ -6,7 +6,9 @@ Bonus feature (which comes with bonus bugs): you can set how long a programme it
 
 ## How do I use it?
 
-Just run `yarn run start`, open your browser to http://localhost:8080/control.html, and embed http://localhost:8080/index.html into your OBS scenes. Change `./programme.toml` to suit your needs.
+Just run `yarn install` and `yarn run start`, open your browser to http://localhost:8080/control.html, and embed http://localhost:8080/index.html into your OBS scenes. Change `./programme.toml` to suit your needs.
+
+I suppose `npm` would work too instead of `yarn`.
 
 ## How does it look like?
 
