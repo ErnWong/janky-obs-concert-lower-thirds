@@ -1,0 +1,73 @@
+<html>
+<head>
+<link rel="stylesheet" href="/bootstrap.min.css">
+<style>
+#timer {
+  font-size: 20px;
+  text-align: center;
+}
+#timer-bar {
+  background-color: red;
+  height: 20px;
+}
+.top-bar {
+  background-color: black;
+}
+</style>
+</head>
+<body>
+<div class="fixed-top top-bar">
+<div id="timer"></div>
+<div id="timer-bar"></div>
+</div>
+<br />
+<br />
+<br />
+<div id="overlay-list" class="list-group"></div>
+<script src="/js/reconnecting-websocket-iife.min.js"></script>
+<script>
+  const rws = new ReconnectingWebSocket('ws://localhost:8080/ws')
+  const timer_div = document.getElementById('timer');
+  const timer_bar = document.getElementById('timer-bar');
+  const overlay_list = document.getElementById('overlay-list');
+  let estimate_duration = 0;
+  let current_duration = 0;
+  setInterval(() => {
+    if (estimate_duration === 0 || current_duration >= estimate_duration) {
+      timer_div.innerText = 'No estimated duration';
+      timer_bar.style.width = '100%';
+      return;
+    }
+    current_duration++;
+    const est_min = Math.floor(estimate_duration / 60);
+    const est_sec = estimate_duration - est_min * 60;
+    const current_min = Math.floor(current_duration / 60);
+    const current_sec = current_duration - current_min * 60;
+    timer_div.innerText = `${current_min}:${current_sec.toString().padStart(2, '0')} / ${est_min}:${est_sec.toString().padStart(2, '0')}`;
+    timer_bar.style.width = `${current_duration / estimate_duration * 100}%`;
+  }, 1000)
+  rws.addEventListener('message', ({data}) => {
+    data = JSON.parse(data);
+    overlay_list.innerHTML = '';
+    for (let [i, s] of data.STATES.entries()) {
+      const overlay_item = document.createElement('a');
+      overlay_item.classList.add('list-group-item');
+      overlay_item.classList.add('list-group-item-action');
+      if (i === data.state) {
+        overlay_item.classList.add('active');
+      }
+      const duration = s === null || s.duration === 0 ? '' : `[${s.duration} min]`;
+      overlay_item.innerHTML = `${s === null ? 'Clear Overlay' : s.html} ${duration}`;
+      overlay_item.addEventListener('click', () => {
+        rws.send('' + i);
+      });
+      overlay_list.appendChild(overlay_item);
+    }
+    if (data.STATES[data.state] !== null) {
+      current_duration = 0;
+      estimate_duration = Math.round(data.STATES[data.state].duration * 60);
+    }
+  });
+</script>
+</body>
+</html>
