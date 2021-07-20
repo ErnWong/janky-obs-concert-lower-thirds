@@ -1,0 +1,91 @@
+[[items]]
+
+[[items]]
+id = "welcome"
+html = "Welcome"
+persist = true
+
+[[items]]
+id = "starting-soon"
+html = "We will be starting soon"
+persist = true
+
+[[items]]
+id = "1-bach-prelude-fugue"
+html = "Bach<br>Prelude and Fugure in B♭ Minor, WTC I, BWV 867"
+duration = 6
+
+[[items]]
+id = "2-haydn-sonata"
+html = "Haydn<br>Sonata in E♭ Major, Hob. XVI:52"
+auto_next = true
+
+[[items]]
+id = "2.1-allegro"
+html = "I. Allegro (Moderato)"
+duration = 6
+
+[[items]]
+id = "2.2-adagio"
+html = "II. Adagio"
+duration = 5
+
+[[items]]
+id = "2.3-finale"
+html = "III. Finale: Presto"
+duration = 5
+
+[[items]]
+id = "3-gaoping-distant-voices"
+html = "Gao Ping<br>Distant Voices (1999)"
+auto_next = true
+
+[[items]]
+id = "3.1-nostalgia"
+html = "I. Nostalgia"
+duration = 4
+
+[[items]]
+id = "3.2-lovesong-of-kangding-town"
+html = "II. Lovesong of Kangding Town"
+duration = 2.7
+
+[[items]]
+id = "3.3-blue-flower"
+html = "III. Blue Flower"
+duration = 7
+
+[[items]]
+id = "intermission"
+html = "Intermission"
+persist = true
+
+[[items]]
+id = "4-beethoven-sonata"
+html = "Beethoven<br>Sonata in A♭ Major, Op. 110"
+auto_next = true
+
+[[items]]
+id = "4.1-moderato-cantabile-molto-espressivo"
+html = "I. Moderato cantabile molto expressivo"
+duration = 7
+
+[[items]]
+id = "4.2-allegro-molto"
+html = "II. Allegro molto"
+duration = 2
+
+[[items]]
+id = "4.3-adagio-ma-non-troppo"
+html = "III. Adagio ma non troppo - Allegro ma non troppo"
+duration = 12
+
+[[items]]
+id = "5-chopin-ballade"
+html = "Chopin<br>Ballade in F Minor, Op. 52"
+duration = 11
+
+[[items]]
+id = "end"
+html = "Thanks for watching"
+persist = true

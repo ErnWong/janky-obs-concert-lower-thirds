@@ -3,6 +3,7 @@
     "express": "^4.17.1",
     "express-ws": "^4.0.0",
     "lodash": "^4.17.20",
-    "reconnecting-websocket": "^4.4.0"
+    "reconnecting-websocket": "^4.4.0",
+    "toml-require": "^1.2.0"
   }
 }

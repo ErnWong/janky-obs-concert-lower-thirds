@@ -33,7 +33,7 @@
   let estimate_duration = 0;
   let current_duration = 0;
   setInterval(() => {
-    if (estimate_duration === 0 || current_duration >= estimate_duration) {
+    if (!estimate_duration || current_duration >= estimate_duration) {
       timer_div.innerText = 'No estimated duration';
       timer_bar.style.width = '100%';
       return;
@@ -49,23 +49,23 @@
   rws.addEventListener('message', ({data}) => {
     data = JSON.parse(data);
     overlay_list.innerHTML = '';
-    for (let [i, s] of data.STATES.entries()) {
+    for (let [i, s] of data.programme.entries()) {
       const overlay_item = document.createElement('a');
       overlay_item.classList.add('list-group-item');
       overlay_item.classList.add('list-group-item-action');
       if (i === data.state) {
         overlay_item.classList.add('active');
       }
-      const duration = s === null || s.duration === 0 ? '' : `[${s.duration} min]`;
-      overlay_item.innerHTML = `${s === null ? 'Clear Overlay' : s.html} ${duration}`;
+      const duration = !s.html || !s.duration ? '' : `[${s.duration} min]`;
+      overlay_item.innerHTML = `${!s.html ? 'Clear Overlay' : s.html} ${duration}`;
       overlay_item.addEventListener('click', () => {
         rws.send('' + i);
       });
       overlay_list.appendChild(overlay_item);
     }
-    if (data.STATES[data.state] !== null) {
+    if (data.programme[data.state].html) {
       current_duration = 0;
-      estimate_duration = Math.round(data.STATES[data.state].duration * 60);
+      estimate_duration = Math.round(data.programme[data.state].duration * 60);
     }
   });
 </script>
