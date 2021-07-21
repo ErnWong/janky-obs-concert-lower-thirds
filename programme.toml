@@ -12,78 +12,93 @@ persist = true
 
 [[items]]
 id = "1-bach-prelude-fugue"
-html = "Bach<br>Prelude and Fugure in B♭ Minor, WTC I, BWV 867"
-duration = 6
-
-[[items]]
-id = "2-haydn-sonata"
-html = "Haydn<br>Sonata in E♭ Major, Hob. XVI:52"
+html = "Claude Debussy<br>Suite Bergamasque, L. 75"
 auto_next = true
 
 [[items]]
-id = "2.1-allegro"
-html = "I. Allegro (Moderato)"
-duration = 6
-
-[[items]]
-id = "2.2-adagio"
-html = "II. Adagio"
-duration = 5
-
-[[items]]
-id = "2.3-finale"
-html = "III. Finale: Presto"
-duration = 5
-
-[[items]]
-id = "3-gaoping-distant-voices"
-html = "Gao Ping<br>Distant Voices (1999)"
-auto_next = true
-
-[[items]]
-id = "3.1-nostalgia"
-html = "I. Nostalgia"
+id = "1.1-prelude"
+html = "I. Prélude"
 duration = 4
 
 [[items]]
-id = "3.2-lovesong-of-kangding-town"
-html = "II. Lovesong of Kangding Town"
-duration = 2.7
+id = "1.2-menuet"
+html = "II. Menuet"
+duration = 4
 
 [[items]]
-id = "3.3-blue-flower"
-html = "III. Blue Flower"
-duration = 7
+id = "1.3-clair-de-lune"
+html = "III. Clair de lune"
+duration = 5.5
 
 [[items]]
-id = "intermission"
-html = "Intermission"
-persist = true
+id = "1.4-passepied"
+html = "IV. Passepied"
+duration = 3
 
 [[items]]
-id = "4-beethoven-sonata"
-html = "Beethoven<br>Sonata in A♭ Major, Op. 110"
+id = "2-naoumoff-desespoir"
+html = "Emile Naoumoff<br>Désespoir, from Reminiscences (2002)"
+duration = 2.5
+
+[[items]]
+id = "3-naoumoff-ruchenitsa"
+html = "Emile Naoumoff<br>Ruchenitsa, from Danses Bulgares (1962)"
+duration = 1
+
+[[items]]
+id = "4-medtner-forgotten-melodies"
+html = "Nikolai Medtner<br>Forgotten Melodies, Op. 39"
 auto_next = true
 
 [[items]]
-id = "4.1-moderato-cantabile-molto-espressivo"
-html = "I. Moderato cantabile molto expressivo"
-duration = 7
+id = "4.1-canzona-matinata"
+html = "4. Canzona Matinata"
+duration = 4
 
 [[items]]
-id = "4.2-allegro-molto"
-html = "II. Allegro molto"
-duration = 2
+id = "4.2-attacca-sonata-tragica"
+html = "5. Attacca, Sonata Tragica"
+duration = 10
 
 [[items]]
-id = "4.3-adagio-ma-non-troppo"
-html = "III. Adagio ma non troppo - Allegro ma non troppo"
-duration = 12
+id = "5-dupont"
+html = "Gabriel Dupont<br>Selections from La Maison dans les dunes"
+auto_next = true
 
 [[items]]
-id = "5-chopin-ballade"
-html = "Chopin<br>Ballade in F Minor, Op. 52"
-duration = 11
+id = "5.1-dans-le-dunes-par-un-clair-matin"
+html = "I. Dans les dunes par un clair matin"
+duration = 4
+
+[[items]]
+id = "5.2-voiles-sur-leau"
+html = "II. Voiles sur l'eau"
+duration = 4
+
+[[items]]
+id = "5.3-la-maison-du-souvenir"
+html = "III. La maison du souvenir"
+duration = 2.5
+
+[[items]]
+id = "5.4-mon-frere-le-vent-et-ma-soeur-la-pluie"
+html = "IV. Mon frère le Vent et ma sœur la Pluie"
+duration = 4
+
+[[items]]
+id = "6-scriabin-etude"
+html = "Alexander Scriabin<br>Etude in B-Flat Minor, Op. 8, No. 11"
+duration = 4
+
+[[items]]
+id = "7-chopin-sonata"
+html = "Chopin<br>Sonata No. 3 in B Minor, Op. 52"
+auto_next = true
+
+[[items]]
+id = "7.1-finale"
+html = "IV. Finale: Presto non tanto"
+duration = 4.5
 
 [[items]]
 id = "end"
